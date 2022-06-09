@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "1"
+    "2"
+    "5"
+    "4"
+    "3";
+}
+
+.promociones{
+    text-align: center;
+    grid-area: 1;
+}
+.contenedor__cabezera{
+    width: 100vw;
+    grid-area: 2;
+}
+.contenedor__cabezera--logo{
+    width: 100vw;
+}
+.contenedor__navegacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-area: 3;
+}
+.contenido{
+    width: 100vw;
+    grid-area: 4;
+}
+.contenido__hero{
+    width: 100vw;
+}
+.contenido__producto{
+    margin: 3em auto;
+    text-align: center;
+}
+.pie{
+    text-align: center;
+    grid-area: 5;
+}
