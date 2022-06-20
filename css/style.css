@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Shadows+Into+Light&display=swap');
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 .contenedor{
     display: grid;
@@ -22,7 +22,6 @@
 }
 .contenedor__cabezera{
     grid-area: cabezera;
-    width: 50vw;
     margin: 0% auto;
 }
 .contenedor__cabezera--logo{
@@ -56,7 +55,6 @@
 .contenido__hero{
     width: 100vw;
 }
-
 .contenido__producto{
     margin: 5% auto;
     text-align: center;
@@ -64,13 +62,12 @@
     background-color: cornflowerblue;
     border: navy 4px solid;
     border-radius: 8%;
-    overflow: hidden;
 }
 .pie{
     grid-area: pie;
     text-align: center;
+    bottom: 0vh;
 }
-
 .contenido__producto--texto{
     text-align:center;
     color:rgb(235, 143, 14);
@@ -80,8 +77,7 @@
             animation:blur 2s ease-out infinite;
     text-shadow:0px 0px 5px #fff,
         0px 0px 7px #fff;
-  }
-  
+}
 @-webkit-keyframes blur{
     from{
         text-shadow:0px 0px 10px #fff,
@@ -103,8 +99,7 @@
         0px -10px 100px #7B96B8,
         0px -10px 100px #7B96B8;
     }
-}
-  
+} 
 @keyframes blur{
     from{
         text-shadow:0px 0px 10px #fff,
@@ -127,6 +122,85 @@
         0px -10px 100px #7B96B8;
     }
 }
+/* CSS Quienes-somos.html */
+.contenido__mision, .contenido__vision{
+    margin-top: 5vh;
+}
+.contenido__mision--titulo, .contenido__vision--titulo{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Almendra', serif;
+    font-weight: 700;
+}
+.contenido__mision p, .contenido__vision p{
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Shadows Into Light', cursive;
+}
+/*  CSS galeria.html */
+.contenido__galeria{
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+.contenido__galeria--fondo{
+    width: 30vw;
+    height: 30vh;
+}
+.contenido__galeria:hover{
+    background-color: transparent;
+    z-index: 50;
+}
+.contenido__galeria span{
+    /* Estilos para la imagen agrandada */
+    position: absolute;
+    background-color: black;
+    padding: 5px;
+    border: 5px double gray;
+    visibility: hidden;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+.contenido__galeria span img{
+    border-width: 0;
+    padding: 2px;
+    width: 25vw;
+    height: 25vh;
+}
+.contenido__galeria:hover span{
+    visibility: visible;
+    top: -100;
+    left: 0px;
+}
+/* CSS Productos.html */
+.contenido__productos{
+	position: relative;
+	width: 20vw;
+	height: auto;
+	padding-top: 350px;
+	padding-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border: 1px #aaaaaa solid;
+    display: inline-block;
+}
+.contenido__productos img.gallery-fullsize {
+	position: absolute;
+    width: 20vw;
+    height: 20vh;
+	top: 15px;
+	display: none;
+}
+label.gallery-label {
+	cursor: pointer;
+}
+
+input.gallery-selector:checked ~ img.gallery-fullsize {
+	display: block;
+}
+/* Breakpoint 768px */
 @media only screen and (min-width: 768px){
     .contenedor{
         grid-template-columns: 50vw 50vw;
@@ -138,17 +212,12 @@
         "contenido contenido"
         "pie pie";
     }
-    .contenedor__cabezera{
-        width: 50vw;
-        margin: 0% auto;
-    }
     .contenedor__cabezera--logo{
         width: 20vw;
         margin: 0% auto;
     }
     .contenedor__navegacion--lista{
         flex-direction: row;
-        -ms-flex-direction: row;
         margin: 0% 4%;
         justify-content: space-between;
         padding: 0% 4%;
@@ -192,10 +261,14 @@
         width: 20vw;
         grid-area: seven;
     }
+    .contenido__mision, .contenido__vision{
+        margin-top: 10vh;
+    }
 }
+/* breakponit 1024px */
 @media only screen and (min-width: 1024px){
     .contenedor{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 33.33vw);
         grid-template-rows: repeat(5, auto);
         grid-template-areas:
         "promo promo promo"
@@ -205,7 +278,7 @@
         "pie pie pie";
     }
     .contenido{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 33.33vw);
         grid-template-rows: repeat(4, auto);
         grid-template-areas: 
         "one one one"
@@ -219,4 +292,15 @@
     .producto__quinto{
         width: 20vw;
     }
+    .contenido__mision{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .contenido__vision{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+
 }
+
