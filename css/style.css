@@ -178,28 +178,26 @@
 /* CSS Productos.html */
 .contenido__productos{
 	position: relative;
-	width: 20vw;
+	width: 100vw;
 	height: auto;
-	padding-top: 350px;
-	padding-bottom: 15px;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	border: 1px #aaaaaa solid;
     display: inline-block;
 }
-.contenido__productos img.gallery-fullsize {
-	position: absolute;
-    width: 20vw;
-    height: 20vh;
-	top: 15px;
+.contenido__productos img.contenido__productos--fullsize {
+	width: 30vw;
+    height: 30vh;
+    margin: 0% auto;
 	display: none;
 }
-label.gallery-label {
+label.contenido__productos--label {
 	cursor: pointer;
 }
-
-input.gallery-selector:checked ~ img.gallery-fullsize {
+.contenido__productos input.contenido__productos--selector:checked ~ img.contenido__productos--fullsize {
 	display: block;
 }
 /* css contacto.html */
