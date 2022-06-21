@@ -304,6 +304,9 @@ hr{
     hr{
         width: 20vw;
     }
+    .contenido__productos{
+        width: 50vw;
+    }
 
 }
 /* breakponit 1024px */
@@ -356,6 +359,8 @@ hr{
         grid-column-end: 3;
         display: block;
     }
-
+    .contenido__productos{
+        width: 33vw;
+    }
 }
 
