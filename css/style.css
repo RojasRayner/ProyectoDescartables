@@ -62,11 +62,13 @@
     background-color: cornflowerblue;
     border: navy 4px solid;
     border-radius: 8%;
+    overflow: hidden;
 }
 .pie{
     grid-area: pie;
     text-align: center;
-    bottom: 0vh;
+    position: relative;
+    bottom: 0;
 }
 .contenido__producto--texto{
     text-align:center;
@@ -170,7 +172,7 @@
 }
 .contenido__galeria:hover span{
     visibility: visible;
-    top: -100;
+    top: -100px;
     left: 0px;
 }
 /* CSS Productos.html */
@@ -199,6 +201,37 @@ label.gallery-label {
 
 input.gallery-selector:checked ~ img.gallery-fullsize {
 	display: block;
+}
+/* css contacto.html */
+.contenido__direccion{
+    margin: 0% auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    width: 100vw;
+    border: 1px;
+    text-align: center;
+    overflow-x: hidden;
+}
+.contenido__sociales{
+    margin: 0% auto;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+hr{
+    width: 100vw;
+    margin: 5px auto;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+}
+.contenido__formulario{
+    display: none;
+    margin:  0 auto;
+}
+.contenido__formulario--registro{
+    font-size: 25px;
+    margin: 1% auto;    
 }
 /* Breakpoint 768px */
 @media only screen and (min-width: 768px){
@@ -264,6 +297,16 @@ input.gallery-selector:checked ~ img.gallery-fullsize {
     .contenido__mision, .contenido__vision{
         margin-top: 10vh;
     }
+    .contenido__direccion{
+        width: 20vw;
+    }
+    .contenido__sociales{
+        width: 20vw;
+    }
+    hr{
+        width: 20vw;
+    }
+
 }
 /* breakponit 1024px */
 @media only screen and (min-width: 1024px){
@@ -300,7 +343,21 @@ input.gallery-selector:checked ~ img.gallery-fullsize {
         grid-column-start: 3;
         grid-column-end: 4;
     }
-
+    .contenido__direccion{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .contenido__sociales{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .contenido__formulario{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: block;
+    }
 
 }
 

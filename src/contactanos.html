@@ -31,7 +31,38 @@
             </ul>
         </nav>
         <main class="contenido">
+                    <div class="contenido__direccion">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3320.350053568231!2d-54.208022989544666!3d-33.67399898749868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2suy!4v1654369672095!5m2!1ses-419!2suy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contenido__sociales">
+                        <h2>Contactanos</h2>
+                        <hr>
+                        <div>
+                            <p>Dirección: Lascano, Rocha</p>
+                            <p>Teléfono: +598 000 000 000 </p>
+                        </div>
+                        <hr>
+                        <a href="https://web.whatsapp.com/" target="_blank"><img src="../imgenes/whatsapp-32x32.png" alt="contacta por whatsapp"></a>
+                        <a href="https://accounts.google.com/ServiceLogin?service=mail" target="_blank"><img src="../imgenes/gmail.png" alt="contacta por gmail"></a>
+                    </div>
+                <!-- formulario de contacto -->
+                <form action="contacto.php" class="contenido__formulario" id="contacto">
+                    <fieldset class="contenido__formulario--registro">
+                        <legend>FORMULARIO DE CONTACTO</legend>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Introduzca su Nombre" alt="introduzca su nombre"><br>
             
+                        <label for="apellido">Apellido: </label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Introduzca su Apellido" alt="introduzca su apellido"><br>
+            
+                        <label for="correo">Correo Electronico: </label>
+                        <input type="email" name="correo" id="correo" placeholder="correo@xxxx.com" alt="introduzca su correo electronico"><br>
+                            
+                        <textarea name="comentario" id="" cols="50" rows="10" id="comentario" placeholder="Comentario: "></textarea><br>
+                        <input type="reset" value="reset" alt="reset formulario">
+                        <input type="submit" value="enviar" alt="enviar formulario">
+                    </fieldset>
+                </form>
         </main>
         <footer class="pie">
             <a href="">Contactanos</a>
