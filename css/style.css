@@ -27,6 +27,34 @@ body{
     font-family: 'Dancing Script', cursive;
     font-weight: 700;
     height: 10vh;
+    width: 100vh;
+}
+.promociones__texto{
+    width: 100vw;
+    transform: translateX(100%);
+    -webkit-animation: desplazamiento 60s linear infinite;
+    animation: desplazamiento 60s linear infinite;
+}
+/* Animacion a promociones */
+@-webkit-keyframes desplazamiento{
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+@keyframes desplazamiento{
+    from {
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
 }
 .contenedor__cabezera{
     grid-area: cabezera;
