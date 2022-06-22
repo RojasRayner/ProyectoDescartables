@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Dancing+Script:wght@700&family=Shadows+Into+Light&display=swap');
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+}
+body{
+    background-image: url(../backgrounds/background-papel.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #A18661;
+    overflow-x: hidden;
 }
 .contenedor{
     display: grid;
@@ -19,6 +28,8 @@
 .promociones{
     grid-area: promo;
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
 }
 .contenedor__cabezera{
     grid-area: cabezera;
@@ -32,7 +43,7 @@
     grid-area: nav;
     text-align: center;
     width: 100vw;
-    background-color: cadetblue;
+    margin-bottom: 10vh;
 }
 .contenedor__navegacion--lista{
     display: flex;
@@ -47,6 +58,15 @@
     -ms-border-radius: 2%;
     -o-border-radius: 2%;
     padding: 2% 2%;
+}
+.contenedor__navegacion--lista a{
+    font-family: 'Almendra', serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+.contenedor__navegacion--lista a:hover{
+    text-decoration: underline;
 }
 .contenido{
     grid-area: contenido;
@@ -64,15 +84,22 @@
     border-radius: 8%;
     overflow: hidden;
 }
+.contenido__producto a, .contenido__productos a{
+    text-decoration: none;
+}
 .pie{
     grid-area: pie;
     text-align: center;
-    position: relative;
-    bottom: 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+.pie div a, .contenido__sociales a{
+    text-decoration: none;
+    color: black;
 }
 .contenido__producto--texto{
     text-align:center;
-    color:rgb(235, 143, 14);
+    color:rgb(255, 255, 255);
     letter-spacing: 4px;
     text-transform:uppercase;
     -webkit-animation:blur 2s ease-out infinite;
@@ -128,13 +155,13 @@
 .contenido__mision, .contenido__vision{
     margin-top: 5vh;
 }
-.contenido__mision--titulo, .contenido__vision--titulo{
+.contenido__mision--titulo, .contenido__vision--titulo, .contenido__productos h2{
     text-align: center;
     font-size: xx-large;
     font-family: 'Almendra', serif;
     font-weight: 700;
 }
-.contenido__mision p, .contenido__vision p{
+.contenido__mision p, .contenido__vision p, .contenido__productos p{
     text-align: center;
     font-size: x-large;
     font-family: 'Shadows Into Light', cursive;
@@ -142,7 +169,9 @@
 /*  CSS galeria.html */
 .contenido__galeria{
     text-align: center;
-    position: relative;
+    margin-top: 15vh;
+    height: 35vh;
+    position: sticky;
     z-index: 0;
 }
 .contenido__galeria--fondo{
@@ -206,6 +235,7 @@ label.contenido__productos--label {
     padding-top: 5vh;
     padding-bottom: 5vh;
     width: 100vw;
+    height: 40vh;
     border: 1px;
     text-align: center;
     overflow-x: hidden;
@@ -213,6 +243,7 @@ label.contenido__productos--label {
 .contenido__sociales{
     margin: 0% auto;
     width: 100vw;
+    height: 40vh;
     text-align: center;
     padding-top: 5vh;
     padding-bottom: 5vh;
@@ -226,6 +257,8 @@ hr{
 .contenido__formulario{
     display: none;
     margin:  0 auto;
+    height: 40vh;
+    margin-bottom: 15vh;
 }
 .contenido__formulario--registro{
     font-size: 25px;
@@ -294,6 +327,7 @@ hr{
     }
     .contenido__mision, .contenido__vision{
         margin-top: 10vh;
+        height: 58vh;
     }
     .contenido__direccion{
         width: 20vw;
@@ -307,7 +341,9 @@ hr{
     .contenido__productos{
         width: 50vw;
     }
-
+    .contenido__galeria{
+        height: 40vh;
+    }
 }
 /* breakponit 1024px */
 @media only screen and (min-width: 1024px){
