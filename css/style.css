@@ -171,6 +171,7 @@ body{
     text-align: center;
     margin-top: 15vh;
     height: 35vh;
+    position: -webkit-sticky;
     position: sticky;
     z-index: 0;
 }
