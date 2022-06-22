@@ -6,12 +6,8 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(../backgrounds/background-papel.webp);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #A18661;
+    background: rgb(128,94,67);
+    background: linear-gradient(90deg, rgba(128,94,67,1) 0%, rgba(224,211,156,1) 35%, rgba(161,133,96,1) 100%);
     overflow-x: hidden;
 }
 .contenedor{
@@ -30,14 +26,54 @@ body{
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-weight: 700;
+    height: 10vh;
 }
 .contenedor__cabezera{
     grid-area: cabezera;
     margin: 0% auto;
+    height: 30vh;
 }
 .contenedor__cabezera--logo{
-    width: 50vw;
+    width: 30vw;
     margin: 0% auto;
+}
+/* Animacion Logo */
+@-webkit-keyframes flotar {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@keyframes flotar {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+.contenedor__cabezera--logo{
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: flotar 6s ease-in-out infinite;
+	-webkit-animation: flotar 6s ease-in-out infinite;
 }
 .contenedor__navegacion{
     grid-area: nav;
@@ -278,7 +314,7 @@ hr{
         "pie pie";
     }
     .contenedor__cabezera--logo{
-        width: 20vw;
+        width: 10vw;
         margin: 0% auto;
     }
     .contenedor__navegacion--lista{
